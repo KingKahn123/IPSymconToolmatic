@@ -6,18 +6,18 @@
     { "type": "Select", "name": "ThresholdValue", "caption": "Threshold Value:",
         "options": [
             { "label": "Immer", "value": 0 },
-            { "label": "5", "value": 5 },
-            { "label": "10", "value": 10 },
-            { "label": "15", "value": 15 },
             { "label": "20", "value": 20 },
-            { "label": "25", "value": 25 },
-            { "label": "30", "value": 30 },
-            { "label": "35", "value": 35 },
             { "label": "40", "value": 40 },
-            { "label": "45", "value": 45 },
-            { "label": "50", "value": 50 },
-            { "label": "75", "value": 75 },
-            { "label": "100", "value": 100 }
+            { "label": "60", "value": 60 },
+            { "label": "80", "value": 80 },
+            { "label": "100", "value": 100 },
+            { "label": "120", "value": 120 },
+            { "label": "140", "value": 140 },
+            { "label": "160", "value": 160 },
+            { "label": "180", "value": 180 },
+            { "label": "200", "value": 200 },
+            { "label": "220", "value": 220 },
+            { "label": "240", "value": 240 }
         ]
     },
 		{ "type": "SelectVariable", "name": "SwitchVariable", "caption": "Switch Variable:" },
