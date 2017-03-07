@@ -3,7 +3,8 @@
 	[
 		{ "type": "SelectVariable", "name": "StateVariable", "caption": "State Variable:" },
 		{ "type": "NumberSpinner", "name": "Duration",  "caption": "Duration (in minutes):" },
-		{ "type": "SelectVariable", "name": "MotionVariable", "caption": "Motion Variable:" },
+		{ "type": "SelectVariable", "name": "MotionVariable 1", "caption": "Motion Variable 1:" },
+		{ "type": "SelectVariable", "name": "MotionVariable 2", "caption": "Motion Variable 2:" },
 		{ "type": "SelectVariable", "name": "PermanentVariable", "caption": "Permanent Variable:" },
 		{ "type": "CheckBox", "name": "ExecScript", "caption": "Simultaneous execution of a script." },
 		{ "type": "SelectScript", "name": "ScriptVariable", "caption": "Script:" },
