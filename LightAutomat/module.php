@@ -87,7 +87,9 @@ class LightAutomat extends IPSModule
   public function Trigger()
   {
     $sv = $this->ReadPropertyInteger("StateVariable");
+    $this->SendDebug('SV', "Variable eingelesen" , 0)
     if (GetValueBoolean($sv) == true) {
+      $this->SendDebug('SV', "Variable ist true" , 0)
       if($this->ReadPropertyBoolean("OnlyScript") == false ) {
         $mid1 = $this->ReadPropertyInteger("MotionVariable1");
         $mid2 = $this->ReadPropertyInteger("MotionVariable2");
