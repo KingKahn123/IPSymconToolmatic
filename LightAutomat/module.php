@@ -42,7 +42,7 @@ class LightAutomat extends IPSModule
   /**
    * Interne Funktion des SDK.
    * Data[0] = neuer Wert
-   * Data[1] = Wert wurde geaändert?
+   * Data[1] = Wert wurde geändert?
    *
    * @access public
    */
