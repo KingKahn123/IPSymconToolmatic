@@ -89,8 +89,8 @@ class LightAutomat extends IPSModule
     $sv = $this->ReadPropertyInteger("StateVariable");
     if (GetValueBoolean($sv) == true) {
       if($this->ReadPropertyBoolean("OnlyScript") == false ) {
-        $mid1 = $this->ReadPropertyInteger("MotionVariable");
-        $mid2 = $this->ReadPropertyInteger("MotionVariable");
+        $mid1 = $this->ReadPropertyInteger("MotionVariable1");
+        $mid2 = $this->ReadPropertyInteger("MotionVariable2");
         if($mid1 != 0 && GetValue($mid1) || $mid2 != 0 && GetValue($mid2)) {
           $this->SendDebug('TLA_Trigger', "Bewegungsmelder aktiv, also nochmal!" , 0);
           return;
