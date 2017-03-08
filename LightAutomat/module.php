@@ -102,10 +102,12 @@ class LightAutomat extends IPSModule
         else {
           if($this->ReadPropertyBoolean("OnlyBool") == true) {
             SetValueBoolean($sv, false);
+            $this->SendDebug('OnlyBool', "ist true" , 0);
           }
         else {
             $pid = IPS_GetParent($sv);          
             HM_WriteValueBoolean($pid, "STATE", false); //Gerät ausschalten
+            $this->SendDebug('SV', "AUSGESCHALTET" , 0);
           }
           $this->SendDebug('TLA_Trigger', "StateVariable (#" . $sv . ") auf false geschalten!" , 0);
           // WFC_PushNotification(xxxxx , 'Licht', '...wurde ausgeschalten!', '', 0);
