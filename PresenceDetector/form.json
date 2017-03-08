@@ -3,6 +3,12 @@
 	[
 		{ "type": "SelectVariable", "name": "MotionVariable", "caption": "Motion Variable:" },
 		{ "type": "SelectVariable", "name": "BrightnessVariable", "caption": "Brightness Variable:" },
+		{ "type": "Select", "name": "PresenceType", "caption": "Bewegungsmelder Typ",
+    			"options": [
+        		{ "label": "Homematic IP (Lux Werte)", "value": 0 },
+        		{ "label": "Homematic Classic", "value": 1 }
+    			]
+		},
     { "type": "Select", "name": "ThresholdValue", "caption": "Threshold Value:",
         "options": [
             { "label": "Immer", "value": 0 },
