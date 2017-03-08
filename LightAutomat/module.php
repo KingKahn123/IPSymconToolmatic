@@ -95,7 +95,7 @@ class LightAutomat extends IPSModule
         $mid2 = $this->ReadPropertyInteger("MotionVariable2");
         $this->SendDebug('MID1', GetValue($mid1) , 0);
         $this->SendDebug('MID2', GetValue($mid2) , 0);
-        if($mid1 != 0 && GetValue($mid1) || $mid2 != 0 && GetValue($mid2)) {
+        if($mid1 != 0 && GetValue($mid1) == true || $mid2 != 0 && GetValue($mid2) == true) {
           $this->SendDebug('TLA_Trigger', "Bewegungsmelder aktiv, also nochmal!" , 0);
           return;
         }
@@ -103,7 +103,7 @@ class LightAutomat extends IPSModule
           if($this->ReadPropertyBoolean("OnlyBool") == true) {
             SetValueBoolean($sv, false);
           }
-          else {
+        else {
             $pid = IPS_GetParent($sv);          
             HM_WriteValueBoolean($pid, "STATE", false); //Gerät ausschalten
           }
