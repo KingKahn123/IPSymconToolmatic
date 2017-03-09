@@ -65,7 +65,6 @@ class LightAutomat extends IPSModule
         }
         if ($Data[0] == true) {
           // Minutenberechnung = 1000ms * 1min(60s) * Duration
-          $this->SendDebug('MessageSink', "TriggerTimer neu erstellt!", 0);
           $this->SetTimerInterval("TriggerTimer", 1000 * 60 * $this->ReadPropertyInteger("Duration"));
         }
         else {
@@ -128,7 +127,6 @@ class LightAutomat extends IPSModule
       $this->SendDebug('TLA_Trigger', "STATE schon FALSE - Timer löschen!" , 0);
     }        
     $this->SetTimerInterval("TriggerTimer", 0);
-    $this->SendDebug('MessageSink', "TRIGGER!", 0);
   }
 
   /**
