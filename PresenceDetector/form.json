@@ -12,6 +12,7 @@
     { "type": "Select", "name": "ThresholdValue", "caption": "Threshold Value:",
         "options": [
             { "label": "Immer", "value": 0 },
+	    { "label": "Nie", "value": -1 },
             { "label": "20", "value": 20 },
             { "label": "40", "value": 40 },
             { "label": "60", "value": 60 },
