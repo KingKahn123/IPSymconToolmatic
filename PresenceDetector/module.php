@@ -38,7 +38,7 @@ class PresenceDetector extends IPSModule
   /**
    * Interne Funktion des SDK.
    * Data[0] = neuer Wert
-   * Data[1] = Wert wurde geändert?
+   * Data[1] = Wert wurde geÃ¤ndert?
    * Data[2] = alter Wert
    *
    * @access public
@@ -90,11 +90,11 @@ class PresenceDetector extends IPSModule
       }
       else {
         $pid = IPS_GetParent($sv);          
-        HM_WriteValueBoolean($pid, "STATE", true); //Gerät einschalten
+        HM_WriteValueBoolean($pid, "STATE", true); //GerÃ¤t einschalten
       }
       $this->SendDebug('SwitchState', "Variable (#" . $sv . ") auf true geschalten!" , 0);
     }
-    // Script ausführen
+    // Script ausfÃ¼hren
     if ($this->ReadPropertyInteger("ScriptVariable") <> 0) {
       if (IPS_ScriptExists($this->ReadPropertyInteger("ScriptVariable"))) {
         $sr = IPS_RunScript($this->ReadPropertyInteger("ScriptVariable"));
@@ -115,12 +115,12 @@ class PresenceDetector extends IPSModule
   */
   public function SetThreshold(int $threshold)
   {
-    if ((($threshold % 5) == 0) && $threshold >= 0 && $threshold <= 50 || $threshold = 75 || $threshold = 100)  {
+   // if ((($threshold % 5) == 0) && $threshold >= 0 && $threshold <= 50 || $threshold = 75 || $threshold = 100)  {
       IPS_SetProperty($this->InstanceID, "ThresholdValue", $threshold);
       IPS_ApplyChanges($this->InstanceID);
       return true;
-    }
-    return false;
+   // }
+   // return false;
   }
 }
 
